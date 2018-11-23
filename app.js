@@ -3,7 +3,7 @@ function fetchData() {
     // var holidayUrl = `http://date.nager.at/api/v1/get/BG/2018`;
     var apiKey = 'e2a15814-aca6-4e89-a057-d658e84035a9';
 
-    var holidayUrl = `  https://holidayapi.com/v1/holidays?key=e2a15814-aca6-4e89-a057-d658e84035a9&country=BG&year=2018&month=12`
+    var holidayUrl = `  https://holidayapi.com/v1/holidays?key=e2a15814-aca6-4e89-a057-d658e84035a9&country=BG&year=2017&month=12`
 
     // $.getJSON(holidayUrl, data,
     //     function (data, textStatus, jqXHR) {
@@ -66,7 +66,7 @@ function getHolidays() {
     console.log("Getting holidays");
     // fetchData();
 
-    var holidayUrl = `http://date.nager.at/api/v1/get/BG/2018`;
+    var holidayUrl = `https://holidayapi.com/v1/holidays?key=e2a15814-aca6-4e89-a057-d658e84035a9&country=BG&year=2017&month=12`;
     $.ajax({
         type: "POST",
         url: holidayUrl,
