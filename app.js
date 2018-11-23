@@ -1,39 +1,3 @@
-function fetchData() {
-    // var dogApi = 'https://random.dog/woof.json';
-    // var holidayUrl = `http://date.nager.at/api/v1/get/BG/2018`;
-    var apiKey = 'e2a15814-aca6-4e89-a057-d658e84035a9';
-
-    var holidayUrl = `  https://holidayapi.com/v1/holidays?key=e2a15814-aca6-4e89-a057-d658e84035a9&country=BG&year=2017&month=12`
-
-    // $.getJSON(holidayUrl, data,
-    //     function (data, textStatus, jqXHR) {
-    //         console.log(jqXHR);
-    //     }
-    // );
-
-    $.ajax({
-        type: "POST",
-        url: holidayUrl,
-        contentType: "text/xml; charset=utf-8",
-        processData: false,
-        async: true,
-        dataType: "xml",
-        success: function (xml) {
-            console.log(xml);
-        }
-
-    });
-
-
-    // fetch(holidayUrl)
-    //     .then(response => response.json())
-    //     .then(json => {
-    //         console.log(json);
-
-    //     })
-};
-
-
 function changeTitle() {
     var select = document.getElementById("inputGroupSelect03").value;
 
@@ -53,6 +17,7 @@ $(document).ready(function () {
         var holidayUrl = `https://holidayapi.com/v1/holidays?key=e2a15814-aca6-4e89-a057-d658e84035a9&country=BG&year=2017&month=12`;
         var jax = $.ajax({
             url: holidayUrl,
+            type: "GET",
             success: function (xml) {
                 console.log(xml);
             }
