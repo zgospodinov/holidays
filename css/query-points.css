@@ -1,0 +1,38 @@
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+body{
+    font-size: 12px;
+}
+.container {
+    margin-bottom: 1rem;
+}
+main div div .input-fields select
+{
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+main div div .input-fields div button{
+    margin-top: 0.5rem;
+}
+
+.container table{
+    margin-top: 0.5rem;
+}
+.container table thead th:first-child{
+    /* background-color: red; */
+    width:30%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
