@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     var country = document.getElementById('inputGroupSelect03').value;  
     var year = document.getElementById('inputGroupSelect04').value;  
-    console.log(year);
+    // console.log(year);
 
     var holidayUrl = `https://www.calendarindex.com/api/v1/holidays?country=${country}&year=${year}&api_key=${apiKey}`
     var jax = $.ajax({
@@ -27,21 +27,24 @@ $(document).ready(function () {
       success: function (json) {
         // console.log(json)
         var holidays = json.response.holidays
-        // console.log(holidays)
+        // console.log(holidays[0])        
 
         var tableBody = $('#tbody')
         tableBody.empty()
 
         for (let i = 0, len = holidays.length; i < len; i++) {
           var holiday = holidays[i]
-          var date = holiday.date
+          var d = new Date(holiday.date)
+          
+          var dateFormatted = d.getDate() + '/' + (d.getMonth()+1);
+        
           var name = holiday.name
 
           var holidayRecord =
           `<tr>
-                <td>${date}</td>
+                <td>${dateFormatted}</td>
                 <td>${name}</td>
-            </tr>`
+            </tr>`;
 
           tableBody.append(holidayRecord)
         }
