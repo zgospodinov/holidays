@@ -24,15 +24,16 @@
 
                     <select class="custom-select" id="inputGroupSelect03" onchange="changeTitle()">
                         <option selected>Country...</option>
-                        <option value="1">Bulgaria</option>
-                        <option value="2">Germany</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="DE">Germany</option>
                     </select>
                     <!-- <input type="date" name="" id="datepicker"> -->
-                    <select class="custom-select" id="inputGroupSelect03" >
+                    <select class="custom-select" id="inputGroupSelect04" >
                         <option selected>Year...</option>
-                        <option value="1">2018</option>
-                        <option value="2">2019</option>
-                        <option value="3">2020</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
                     </select>
                     <div class="input-group-prepend ">
                         <button id="fetchBtn" class="btn btn-outline-primary" type="button">HOLIDAYS</button>
@@ -50,7 +51,7 @@
                             <th scope="col">Holiday</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tbody">
                         <tr>
                             <td>Jacob</td>
                             <td>Larry</td>
