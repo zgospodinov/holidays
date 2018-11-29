@@ -1,12 +1,22 @@
+var countries = {
+  BG: "Bulgaria",
+  DE: "Germany"
+}
+
+// console.log(countries["BG"]);
+
 function changeTitle() {
   var select = document.getElementById('inputGroupSelect03').value
+  var appWelcome = $("#appWelcome");
 
   if (select === 'BG') {
-    document.title = 'Holidays-BG'
+    document.title = 'BG-Holidays';
+
   } else if (select === 'DE') {
-    document.title = 'Holidays-DE'
+    document.title = 'DE-Holidays'
   }
-  console.log(select)
+  appWelcome.html(`<h4>Bank Holidays - ${countries[select]}</h4>`);
+
 }
 
 $(document).ready(function () {
