@@ -1,4 +1,4 @@
-function changeTitle () {
+function changeTitle() {
   var select = document.getElementById('inputGroupSelect03').value
 
   if (select === 'BG') {
@@ -14,10 +14,10 @@ $(document).ready(function () {
     var apiKey = 'a777a81982d82a4fa8d82983aae77c9ded59de6a'
     var country, year
 
-    console.log('Getting holidays')
+    // console.log('Getting holidays')
 
-    var country = document.getElementById('inputGroupSelect03').value;  
-    var year = document.getElementById('inputGroupSelect04').value;  
+    var country = document.getElementById('inputGroupSelect03').value;
+    var year = document.getElementById('inputGroupSelect04').value;
     // console.log(year);
 
     var holidayUrl = `https://www.calendarindex.com/api/v1/holidays?country=${country}&year=${year}&api_key=${apiKey}`
@@ -35,13 +35,24 @@ $(document).ready(function () {
         for (let i = 0, len = holidays.length; i < len; i++) {
           var holiday = holidays[i]
           var d = new Date(holiday.date)
-          
-          var dateFormatted = d.getDate() + '/' + (d.getMonth()+1);
-        
+          // console.log(d.getMonth().toString().length);
+
+          var monthString;
+          if ((d.getMonth() + 1).toString().length > 1) {
+            monthString = (d.getMonth() + 1);
+            console.log(monthString);
+          } else {
+            monthString = `0${(d.getMonth() + 1)}`;
+            console.log(monthString);
+          }
+
+          // var dateFormatted = d.getDate() + '/' + (d.getMonth() + 1);
+          var dateFormatted = d.getDate() + '/' + monthString;
+
           var name = holiday.name
 
           var holidayRecord =
-          `<tr>
+            `<tr>
                 <td>${dateFormatted}</td>
                 <td>${name}</td>
             </tr>`;
