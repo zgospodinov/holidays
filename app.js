@@ -2,7 +2,7 @@ var countries = {
   BG: "Bulgaria",
   DE: "Germany"
 }
-var testing = false;
+var testing = true;
 var mockupResponse = {
   "meta": {
     "code": 200
@@ -263,6 +263,10 @@ function scrollFunction() {
 function topFunction() {
   // console.log($('body'));
   $('body').animate({
+    scrollTop: 0
+  }, 1000);
+
+  $('documentElement').animate({
     scrollTop: 0
   }, 1000);
 }
