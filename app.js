@@ -3,7 +3,7 @@ function changeTitle() {
 
   if (select === 'BG') {
     document.title = 'Holidays-BG'
-  } else if (select === 'BG') {
+  } else if (select === 'DE') {
     document.title = 'Holidays-DE'
   }
   console.log(select)
