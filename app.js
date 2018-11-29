@@ -262,11 +262,12 @@ function scrollFunction() {
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   // console.log($('body'));
+  $('body').css('overflow-y', 'hidden');
   $('body').animate({
     scrollTop: 0
   }, 1000);
-
-  $('documentElement').animate({
-    scrollTop: 0
-  }, 1000);
+  $('body').css('overflow-y', 'auto');
+  // $('documentElement').animate({
+  //   scrollTop: 0
+  // }, 1000);
 }
