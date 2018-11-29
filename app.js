@@ -2,7 +2,7 @@ var countries = {
   BG: "Bulgaria",
   DE: "Germany"
 }
-var testing = true;
+var testing = false;
 var mockupResponse = {
   "meta": {
     "code": 200
@@ -252,7 +252,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     document.getElementById("myBtn").style.display = "block";
   } else {
     document.getElementById("myBtn").style.display = "none";
@@ -261,6 +261,8 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  // console.log($('body'));
+  $('body').animate({
+    scrollTop: 0
+  }, 1000);
 }
