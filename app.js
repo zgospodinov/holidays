@@ -1,6 +1,7 @@
 var countries = {
-  BG: "Bulgaria",
-  DE: "Germany"
+  placeHolder: "",
+  BG: " - Bulgaria",
+  DE: " - Germany"
 }
 var testing = true;
 var mockupResponse = {
@@ -134,7 +135,8 @@ var mockupResponse = {
 // console.log(countries["BG"]);
 
 function changeTitle() {
-  var select = document.getElementById('inputGroupSelect03').value
+  var select = document.getElementById('inputGroupSelect03');
+  console.log(select.value);
   var appWelcome = $("#appWelcome");
 
   if (select === 'BG') {
@@ -143,7 +145,7 @@ function changeTitle() {
   } else if (select === 'DE') {
     document.title = 'DE-Holidays'
   }
-  appWelcome.html(`<h4>Bank Holidays - ${countries[select]}</h4>`);
+  appWelcome.html(`<h4>Bank Holidays${countries[select.value]}</h4>`);
 
 }
 
