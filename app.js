@@ -2,7 +2,7 @@ var countries = {
   BG: "Bulgaria",
   DE: "Germany"
 }
-var testing = false;
+var testing = true;
 var mockupResponse = {
   "meta": {
     "code": 200

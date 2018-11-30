@@ -27,17 +27,17 @@
             <div id="appWelcome" class="container text-center text-primary">
                 <h4>Bank Holidays</h4>
             </div>
-            <div class="container ">
-                <div class="input-group mb-5 input-fields">
+            <div class="container p-0">
+                <div class="input-group mb-0 input-fields">
 
-                    <select class="custom-select border border-primary mr-1 text-primary" id="inputGroupSelect03"
+                    <select class="custom-select border border-primary mr-1 text-primary rounded" id="inputGroupSelect03"
                         onchange="changeTitle()">
                         <option selected>Country...</option>
                         <option value="BG">Bulgaria</option>
                         <option value="DE">Germany</option>
                     </select>
                     <!-- <input type="date" name="" id="datepicker"> -->
-                    <select class="custom-select border border-primary mr-1 text-primary" id="inputGroupSelect04">
+                    <select class="custom-select border border-primary mr-1  text-primary rounded" id="inputGroupSelect04">
                         <option selected>Year...</option>
                         <option value="2018">2018</option>
                         <option value="2019">2019</option>
@@ -45,8 +45,18 @@
                         <option value="2021">2021</option>
                     </select>
                     <div class="input-group-prepend ">
-                        <button id="fetchBtn" class="btn btn-outline-primary" type="button">GET</button>
+                        <button id="fetchBtn" class="btn btn-primary rounded " type="button">GET</button>
                     </div>
+
+                </div>
+            </div>
+            <div class="container mb-0 p-0">
+                <div class="input-group mb-2 input-fields">
+                    <select class="custom-select border border-primary mt-0 text-primary" id="inputGroupSelect05">
+                        <option selected>Preview...</option>
+                        <option value="1">List</option>
+                        <option value="2">Calendar</option>
+                    </select>
                 </div>
             </div>
         </div>
