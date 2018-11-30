@@ -3,6 +3,9 @@ var countries = {
   BG: " - Bulgaria",
   DE: " - Germany"
 }
+
+var previewOption;
+
 var testing = true;
 var mockupResponse = {
   "meta": {
@@ -211,6 +214,19 @@ if (testing !== true) {
   fakeCAll(mockupResponse);
 }
 
+
+function setPreviewOption(sel) {
+  previewOption = sel.value;
+
+  if (previewOption === '1') {
+    alert('list-view');
+  }
+
+  if (previewOption === '2') {
+    alert('calendar-view');
+  }
+};
+
 function fakeCAll(json) {
   // console.log(json)
   var holidays = json.response.holidays
@@ -218,6 +234,9 @@ function fakeCAll(json) {
 
   var tableBody = $('#tbody')
   tableBody.empty()
+
+
+
 
   for (let i = 0, len = holidays.length; i < len; i++) {
     var holiday = holidays[i]
